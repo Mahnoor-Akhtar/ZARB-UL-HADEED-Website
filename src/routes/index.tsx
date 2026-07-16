@@ -33,7 +33,7 @@ function Navbar() {
   const [open, setOpen] = useState(false);
   return (
     <header className="sticky top-0 z-50 backdrop-blur-lg bg-[color:var(--forest-deep)]/80 border-b border-gold">
-      <div className="mx-auto max-w-7xl px-[10px] flex h-20 items-center justify-between">
+      <div className="mx-auto max-w-7xl px-[15px] flex h-20 items-center justify-between">
         <div className="flex items-center gap-3">
           <a href="#" className="flex items-center gap-3">
             <img src={logoSrc} alt="Zarb Ul Hadeed CXVII emblem" className="h-14 w-14 rounded-full ring-1 ring-[color:var(--gold)]/50" />
@@ -107,7 +107,7 @@ function Hero() {
           </div>
 
           {/* Headline */}
-          <h1 className="mt-6 font-display font-bold leading-[1.05] tracking-tight text-[2.5rem] sm:text-5xl lg:text-[3.5rem] drop-shadow-[0_4px_24px_rgba(0,0,0,0.7)]">
+          <h1 className="mt-6 font-display font-bold leading-[1.05] tracking-tight text-[3rem] sm:text-6xl lg:text-[4.5rem] drop-shadow-[0_4px_24px_rgba(0,0,0,0.7)]">
             <span className="block text-white">Command Your Roster.</span>
             <span className="block text-gold-gradient">With Precision & Pride.</span>
           </h1>
