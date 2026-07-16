@@ -33,7 +33,7 @@ function Navbar() {
   const [open, setOpen] = useState(false);
   return (
     <header className="sticky top-0 z-50 backdrop-blur-lg bg-[color:var(--forest-deep)]/80 border-b border-gold">
-      <div className="mx-auto max-w-7xl px-1 flex h-20 items-center justify-between">
+      <div className="mx-auto max-w-7xl px-[10px] flex h-20 items-center justify-between">
         <div className="flex items-center gap-3">
           <a href="#" className="flex items-center gap-3">
             <img src={logoSrc} alt="Zarb Ul Hadeed CXVII emblem" className="h-14 w-14 rounded-full ring-1 ring-[color:var(--gold)]/50" />
