@@ -1,0 +1,274 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-display: "Cinzel", serif;
+  --font-sans: "Inter", sans-serif;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-forest: var(--forest);
+  --color-forest-deep: var(--forest-deep);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-neon: var(--neon);
+}
+
+:root {
+  --radius: 0.625rem;
+
+  /* Brand */
+  --forest: #0C5A32;
+  --forest-deep: #03140A;
+  --gold: #CD9B2D;
+  --gold-soft: #FFF2C2;
+  --neon: #00FF66;
+
+  /* Dark theme (default for this landing) */
+  --background: #03140A;
+  --foreground: #FFFFFF;
+  --card: #071e11;
+  --card-foreground: #FFFFFF;
+  --popover: #071e11;
+  --popover-foreground: #FFFFFF;
+  --primary: #0C5A32;
+  --primary-foreground: #FFF2C2;
+  --secondary: #0a2a17;
+  --secondary-foreground: #FFF2C2;
+  --muted: #0a2a17;
+  --muted-foreground: #A8B8AE;
+  --accent: #CD9B2D;
+  --accent-foreground: #03140A;
+  --destructive: #FF5252;
+  --destructive-foreground: #FFFFFF;
+  --border: color-mix(in oklab, #CD9B2D 25%, transparent);
+  --input: #0a2a17;
+  --ring: #CD9B2D;
+
+  --gradient-hero: radial-gradient(1200px 600px at 20% 10%, color-mix(in oklab, #0C5A32 35%, transparent), transparent 60%),
+                   radial-gradient(900px 500px at 90% 80%, color-mix(in oklab, #CD9B2D 15%, transparent), transparent 60%),
+                   linear-gradient(180deg, #03140A 0%, #05200f 100%);
+  --gradient-gold: linear-gradient(135deg, #9E7715 0%, #CD9B2D 40%, #FFF2C2 100%);
+  --gradient-forest: linear-gradient(135deg, #0C5A32 0%, #03140A 100%);
+  --shadow-gold: 0 10px 40px -12px color-mix(in oklab, #CD9B2D 40%, transparent);
+  --shadow-neon: 0 0 0 1px color-mix(in oklab, #00FF66 40%, transparent), 0 8px 30px -8px color-mix(in oklab, #00FF66 45%, transparent);
+}
+
+/* ===== Light theme ===== */
+.light {
+  color-scheme: light;
+  --forest: #0C5A32;
+  --forest-deep: #E8F5EE;
+  --gold: #9E7715;
+  --gold-soft: #4A5D52;
+  --neon: #0C5A32;
+
+  --background: #E8F5EE;
+  --foreground: #042011;
+  --card: #ffffff;
+  --card-foreground: #042011;
+  --popover: #ffffff;
+  --popover-foreground: #042011;
+  --primary: #0C5A32;
+  --primary-foreground: #ffffff;
+  --secondary: #E8F5EE;
+  --secondary-foreground: #042011;
+  --muted: #E8F5EE;
+  --muted-foreground: #4A5D52;
+  --accent: #9E7715;
+  --accent-foreground: #ffffff;
+  --border: color-mix(in oklab, #9E7715 35%, transparent);
+  --input: #ffffff;
+  --ring: #9E7715;
+
+  --danger: #D32F2F;
+  --danger-muted: #FFD2D2;
+  --destructive: #D32F2F;
+  --destructive-foreground: #ffffff;
+
+  --gradient-hero: radial-gradient(1200px 600px at 20% 10%, color-mix(in oklab, #9E7715 15%, transparent), transparent 60%),
+                   radial-gradient(900px 500px at 90% 80%, color-mix(in oklab, #0C5A32 12%, transparent), transparent 60%),
+                   linear-gradient(180deg, #E8F5EE 0%, #d6ecdf 100%);
+}
+
+/* Remap dark-mode utility colors used across the app */
+.light .text-white { color: var(--foreground); }
+.light .text-white\/90 { color: color-mix(in oklab, var(--foreground) 90%, transparent); }
+.light .text-white\/80 { color: color-mix(in oklab, var(--foreground) 82%, transparent); }
+.light .text-white\/70 { color: color-mix(in oklab, var(--foreground) 75%, transparent); }
+.light .text-white\/60 { color: color-mix(in oklab, var(--foreground) 68%, transparent); }
+.light .text-white\/50 { color: color-mix(in oklab, var(--foreground) 60%, transparent); }
+.light .text-white\/40 { color: color-mix(in oklab, var(--foreground) 52%, transparent); }
+.light .text-white\/30 { color: color-mix(in oklab, var(--foreground) 45%, transparent); }
+.light .text-white\/25 { color: color-mix(in oklab, var(--foreground) 42%, transparent); }
+.light .text-white\/20 { color: color-mix(in oklab, var(--foreground) 40%, transparent); }
+
+.light .placeholder\:text-white\/20::placeholder,
+.light .placeholder\:text-white\/25::placeholder,
+.light .placeholder\:text-white\/30::placeholder {
+  color: color-mix(in oklab, var(--foreground) 40%, transparent);
+}
+
+.light .bg-black\/40 { background-color: rgb(255 255 255 / 0.7); }
+.light .bg-black\/30 { background-color: rgb(255 255 255 / 0.55); }
+.light .bg-black\/20 { background-color: rgb(255 255 255 / 0.4); }
+
+.light .border-white\/5 { border-color: rgb(0 0 0 / 0.06); }
+.light .border-white\/10 { border-color: rgb(0 0 0 / 0.1); }
+.light .border-white\/15 { border-color: rgb(0 0 0 / 0.13); }
+.light .border-white\/20 { border-color: rgb(0 0 0 / 0.16); }
+
+.light .bg-white\/5 { background-color: rgb(0 0 0 / 0.04); }
+
+/* ===== Light-theme utility & component overrides ===== */
+.light {
+  --gradient-gold: linear-gradient(135deg, #7a5a10 0%, #9E7715 45%, #c99a2a 100%);
+  --gradient-forest: linear-gradient(135deg, #E8F5EE 0%, #cfe6d9 100%);
+  --shadow-gold: 0 12px 40px -14px color-mix(in oklab, #9E7715 45%, transparent);
+  --shadow-soft: 0 20px 50px -25px color-mix(in oklab, #0C5A32 35%, transparent);
+}
+
+.light .card-forest {
+  background: #ffffff;
+  border: 1px solid color-mix(in oklab, #9E7715 22%, transparent);
+  box-shadow: 0 1px 0 rgb(12 90 50 / 0.04), 0 12px 30px -20px rgb(12 90 50 / 0.15);
+}
+.light .card-forest:hover { border-color: color-mix(in oklab, #9E7715 55%, transparent); }
+
+.light .btn-neon {
+  background: #0C5A32;
+  color: #ffffff;
+}
+.light .btn-neon-hover {
+  box-shadow: 0 10px 28px -10px color-mix(in oklab, #0C5A32 55%, transparent);
+  transform: translateY(-1px);
+}
+
+.light .border-gold { border-color: color-mix(in oklab, #9E7715 45%, transparent); }
+.light .bg-hero { background: var(--gradient-hero); }
+.light .bg-forest-gradient { background: linear-gradient(180deg, #ffffff 0%, #E8F5EE 100%); }
+
+/* Section backgrounds where the app hard-codes forest-deep */
+.light .bg-\[color\:var\(--forest-deep\)\] { background-color: #ffffff; }
+.light .bg-\[color\:var\(--forest-deep\)\]\/80 { background-color: rgb(255 255 255 / 0.85); }
+.light .bg-\[color\:var\(--forest-deep\)\]\/60 { background-color: rgb(255 255 255 / 0.7); }
+.light .bg-\[color\:var\(--forest-deep\)\]\/50 { background-color: rgb(255 255 255 / 0.6); }
+.light .bg-\[color\:var\(--forest-deep\)\]\/40 { background-color: rgb(255 255 255 / 0.5); }
+
+/* Hero keeps its cinematic dark treatment even in light mode — use forest-green overlays over the video, and force white text back inside the hero. */
+.light .hero-dark .from-\[color\:var\(--forest-deep\)\]\/92 { --tw-gradient-from: rgb(3 20 10 / 0.88); }
+.light .hero-dark .via-\[color\:var\(--forest-deep\)\]\/55 { --tw-gradient-via: rgb(6 32 15 / 0.55); }
+.light .hero-dark .from-\[color\:var\(--forest-deep\)\]\/40 { --tw-gradient-from: rgb(3 20 10 / 0.35); }
+.light .hero-dark .to-\[color\:var\(--forest-deep\)\]\/70 { --tw-gradient-to: rgb(3 20 10 / 0.65); }
+.light .hero-dark .bg-\[color\:var\(--forest-deep\)\]\/60 { background-color: rgb(3 20 10 / 0.6); }
+.light .hero-dark .bg-\[color\:var\(--forest-deep\)\]\/50 { background-color: rgb(3 20 10 / 0.5); }
+.light .hero-dark .bg-\[color\:var\(--forest-deep\)\]\/40 { background-color: rgb(3 20 10 / 0.4); }
+
+.light .hero-dark .text-white { color: #ffffff; }
+.light .hero-dark .text-white\/90 { color: rgb(255 255 255 / 0.9); }
+.light .hero-dark .text-white\/80 { color: rgb(255 255 255 / 0.85); }
+.light .hero-dark .text-white\/75 { color: rgb(255 255 255 / 0.8); }
+.light .hero-dark .text-white\/70 { color: rgb(255 255 255 / 0.75); }
+.light .hero-dark .text-white\/60 { color: rgb(255 255 255 / 0.65); }
+
+/* Gold gradient headline stays warm gold on the dark video */
+.light .hero-dark .text-gold-gradient {
+  background: linear-gradient(135deg, #CD9B2D 0%, #E9B84A 50%, #FFF2C2 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Neon CTA regains its punch on dark hero */
+.light .hero-dark .btn-neon { background: #00FF66; color: #03140A; }
+
+
+/* Gold-gradient headings need a darker accent stop on light bg */
+.light .text-gold-gradient {
+  background: linear-gradient(135deg, #7a5a10 0%, #9E7715 55%, #b98a1f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Primary text tokens */
+.light .text-\[color\:var\(--gold-soft\)\] { color: #4A5D52; }
+
+
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html { scroll-behavior: smooth; font-size: 16px; }
+  body {
+    background: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: 0.01em; }
+}
+
+@utility text-gold-gradient {
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility bg-hero {
+  background: var(--gradient-hero);
+}
+
+@utility bg-forest-gradient {
+  background: var(--gradient-forest);
+}
+
+@utility border-gold {
+  border-color: color-mix(in oklab, #CD9B2D 30%, transparent);
+}
+
+@utility ring-gold {
+  box-shadow: var(--shadow-gold);
+}
+
+@utility btn-neon {
+  background: #00FF66;
+  color: #03140A;
+  font-weight: 700;
+  transition: transform .15s ease, box-shadow .2s ease, background .2s ease;
+}
+@utility btn-neon-hover {
+  box-shadow: var(--shadow-neon);
+  transform: translateY(-1px);
+}
+
+@utility card-forest {
+  background: linear-gradient(180deg, #06200f 0%, #041a0c 100%);
+  border: 1px solid color-mix(in oklab, #CD9B2D 22%, transparent);
+  border-radius: 1rem;
+}
