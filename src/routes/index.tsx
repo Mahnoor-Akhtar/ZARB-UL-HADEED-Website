@@ -107,7 +107,7 @@ function Hero() {
           </div>
 
           {/* Headline */}
-          <h1 className="mt-6 font-display font-bold leading-[1.05] tracking-tight text-[3rem] sm:text-6xl lg:text-[4.5rem] drop-shadow-[0_4px_24px_rgba(0,0,0,0.7)]">
+          <h1 className="mt-6 font-display font-bold leading-[1.05] tracking-tight text-[2.5rem] sm:text-5xl lg:text-[3.5rem] drop-shadow-[0_4px_24px_rgba(0,0,0,0.7)]">
             <span className="block text-white">Command Your Roster.</span>
             <span className="block text-gold-gradient">With Precision & Pride.</span>
           </h1>
