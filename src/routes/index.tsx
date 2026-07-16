@@ -635,9 +635,9 @@ function Footer() {
 
 function Landing() {
   return (
-    <div className="min-h-screen mx-5">
+    <div className="min-h-screen">
       <Navbar />
-      <main>
+      <main className="mx-10">
         <Hero />
         <Stats />
         <Features />
